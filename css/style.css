@@ -1,0 +1,92 @@
+/*
+-=-=-=-=-=-=-=-=-=-=-=-=-=
+A NEW SKY
+---------------------------
+
+@author: Alex Ayers
+@date: 9/19/2012
+@version: 1.0
+-=-=-=-=-=-=-=-=-=-=-=-=-=-
+*/
+
+#link {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 12px;
+}
+
+canvas {
+
+}
+
+#mywindow {
+    position:absolute;
+    top:15%;
+    left: 35%;
+}
+
+#myframe {
+
+    border:2px solid #000000; 
+    margin: 0px; 
+    padding: 0px;
+    width:368px; 
+    height:455px;
+    display:block;
+}
+
+#subtitle {
+    top:25%;
+    right:25%;
+    bottom:25%;
+    left:25%;
+    padding:25px;
+    margin:25px;
+    color: #ffffff;
+    font-family: lucida console,Arial;
+    font-size: 14px;
+    display: block;
+    text-align: left;
+}
+
+#maintitle {
+    top:25%;
+    right:25%;
+    bottom:25%;
+    left:25%;
+    padding:25px;
+    margin:25px;
+    color: #ffffff;
+    font-family: lucida console,Arial;
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    font-weight:bold;
+
+}
+
+
+#container {
+    width: 350px;
+    height: 400px;
+    position:absolute;
+
+}
+
+#BackgroundLayer {
+
+    border: 1px solid #000000;
+    z-index: 0;
+}
+
+#TextLayer {
+    z-index: 1;
+}

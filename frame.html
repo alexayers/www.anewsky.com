@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+    <head>
+
+
+
+        <meta charset="UTF-8">
+            <meta property="og:image" content="http://www.anewsky.com/anewsky.png"/>
+            <meta property="og:title" content="A New Sky" />
+            <meta property="og:type" content="game" />
+            <meta property="og:url" content="http://www.anewsky.com/" />
+            <meta property="fb:admins" content="alexayers" />
+
+            <meta name="og:description" content="A New Sky - A game by Alex Ayers" />
+            <link rel="image_src" href="http://www.anewsky.com/anewsky.png"/>
+            <title>A NEW SKY</title>
+            <script type="text/JavaScript" src="js/jquery-1.8.1.min.js"></script>
+            <script type="text/JavaScript" src="js/rendering/layer.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rendering/particle.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/game/inventory.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/objects/door.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/objects/object_database.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/objects/objects.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/game/scenemgr.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/game/room_base.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/game/audio.js?v=1.0.2"></script> 
+
+            <!-- All of our rooms -->
+
+            <script type="text/JavaScript" src="js/rooms/Begin.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room0.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/rooms/Room1.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/rooms/Room2.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room3.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room4.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room5.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room6.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room7.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room8.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room9.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room10.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room11.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room12.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room13.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room14.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room15.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room16.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room17.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room18.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room19.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room20.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room21.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room22.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room23.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room24.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room25.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room26.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room27.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room28.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room29.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room30.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room31.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room32.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room33.js?v=1.0.2"></script>
+            <script type="text/JavaScript" src="js/rooms/Room34.js?v=1.0.2"></script>
+            
+            <script type="text/JavaScript" src="js/game/preload_audio.js?v=1.0.2"></script> 
+            <script type="text/JavaScript" src="js/game/preload_img.js?v=1.0.2"></script> 
+            
+
+            <script type="text/JavaScript" src="js/game/engine.js?v=1.0.2"></script> 
+
+
+
+            <link rel="stylesheet" type="text/css" href="css/style.css?v=1.0.2" media="screen" />
+            <script>
+
+            </script>
+            <script type="text/javascript">
+
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-34938576-1']);
+                _gaq.push(['_trackPageview']);
+
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+  
+  
+
+            </script>
+    </head>
+    <body>
+        <div id="subtitle"></div>
+        <div id="maintitle"></div>
+        <canvas id="Viewport" width="350" height="400"></canvas>
+
+        <div id="mouse_coord"></div>
+
+
+        <div class="hidden">
+            <script type="text/javascript">
+                
+                $("#maintitle").text("A NEW SKY");
+                $("#subtitle").text("Preloading resources...");
+                
+                
+            
+                 
+            </script>
+        </div>
+
+
+    </body>
+</html>
