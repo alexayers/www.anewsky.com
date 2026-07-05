@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #000000;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* Center the canvas and letterbox it against the black page. */
+#game-wrap {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The canvas keeps its fixed 350x400 backing store but scales up to fill the
+   window, preserving the 7:8 aspect ratio with crisp pixel-art edges.
+   height is the largest value that fits both the viewport height and (via the
+   aspect ratio) its width; width is then derived from the aspect ratio. */
+#Viewport {
+  aspect-ratio: 350 / 400;
+  height: min(100vh, 100vw * 8 / 7);
+  width: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: block;
+  cursor: default;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Title/subtitle overlays used by the intro cutscene, centered over the game. */
+#maintitle,
+#subtitle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none;
+  z-index: 10;
+  display: none;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-shadow: 0 0 6px #000, 0 0 3px #000;
+}
+
+#maintitle {
+  top: 28%;
+  font-size: 6vh;
+  font-weight: bold;
+}
+
+#subtitle {
+  top: 58%;
+  padding: 0 8%;
+  font-size: 2.4vh;
+}
