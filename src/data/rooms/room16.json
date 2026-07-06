@@ -1,0 +1,38 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room16",
+  "ambient": "cave",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room16/room16_1b.png"] },
+    {
+      "role": "middleground",
+      "animationRate": 10,
+      "images": [
+        "img/rooms/room16/room16_1m.png",
+        "img/rooms/room16/room16_2m.png",
+        "img/rooms/room16/room16_3m.png",
+        "img/rooms/room16/room16_4m.png",
+        "img/rooms/room16/room16_5m.png",
+        "img/rooms/room16/room16_6m.png",
+        "img/rooms/room16/room16_6m.png",
+        "img/rooms/room16/room16_6m.png",
+        "img/rooms/room16/room16_6m.png"
+      ]
+    },
+    { "role": "foreground", "images": ["img/rooms/room16/room16_1f.png"] }
+  ],
+  "objects": [
+    {
+      "title": "generator",
+      "type": "hitbox",
+      "position": [141, 164, 204, 206],
+      "clickSound": "empty_supply",
+      "value": "not_powered",
+      "onClick": "room16.generator"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room15", "clickSound": "walk_sand" },
+    { "position": [315, 0, 350, 350], "destination": "Room17", "clickSound": "walk_sand" }
+  ]
+}

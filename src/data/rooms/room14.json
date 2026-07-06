@@ -1,0 +1,20 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room14",
+  "ambient": "waves",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room14/room14_1b.png"] },
+    { "role": "middleground", "images": ["img/rooms/room14/room14_1m.png"] }
+  ],
+  "objects": [
+    {
+      "title": "grave",
+      "type": "hitbox",
+      "position": [149, 234, 206, 312],
+      "onClick": "room14.grave"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room13", "clickSound": "walk_sand" }
+  ]
+}

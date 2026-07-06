@@ -1,0 +1,17 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Begin",
+  "ambient": "begin",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 20,
+      "images": [
+        "img/rooms/begin/begin1.png",
+        "img/rooms/begin/begin2.png",
+        "img/rooms/begin/begin3.png"
+      ]
+    }
+  ],
+  "doors": [{ "position": [0, 0, 350, 350], "destination": "Room0" }]
+}

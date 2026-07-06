@@ -1,0 +1,22 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room27",
+  "ambient": "bad_light",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room27/room27_1b.png"] }
+  ],
+  "objects": [
+    {
+      "title": "photo",
+      "type": "itembox",
+      "position": [66, 180, 140, 215],
+      "clickSound": "pickup",
+      "image": "img/objects/photo.png",
+      "onClick": "room27.photo"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 350, 145], "destination": "Room2", "clickSound": "walk_building" },
+    { "position": [0, 237, 350, 350], "destination": "Room2", "clickSound": "walk_building" }
+  ]
+}

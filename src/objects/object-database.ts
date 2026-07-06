@@ -8,36 +8,12 @@ class ObjDatabase {
   private objList: Record<string, GameObject> = {};
   private objIdx = 1;
 
-  Init(): void {
-    this.RegisterObject("keycard");
-    this.RegisterObject("key");
-    this.RegisterObject("hammer");
-    this.RegisterObject("toolbox");
-    this.RegisterObject("purple_crystal");
-    this.RegisterObject("pink_crystal");
-    this.RegisterObject("blue_crystal");
-    this.RegisterObject("storage_device");
-    this.RegisterObject("parachute");
-    this.RegisterObject("photo");
-    this.RegisterObject("cardreader");
-    this.RegisterObject("broken_cardreader");
-    this.RegisterObject("keypad");
-    this.RegisterObject("keypad_enter");
-    this.RegisterObject("power_cell");
-    this.RegisterObject("trunk");
-    this.RegisterObject("generator");
-    this.RegisterObject("mappad");
-    this.RegisterObject("mappad_enter");
-    this.RegisterObject("glassdoor");
-    this.RegisterObject("shovel");
-    this.RegisterObject("wall_shovel");
-    this.RegisterObject("grave");
-    this.RegisterObject("release_storage");
-    this.RegisterObject("empty_storage");
-    this.RegisterObject("cave_computer");
-    this.RegisterObject("mapload_enter");
-    this.RegisterObject("nav_storage");
-    this.RegisterObject("nav_enter");
+  // Registers object ids in order; the index becomes the id used for key/lock
+  // matching, so the ordering (from data/registry.json) must be preserved.
+  Init(names: string[]): void {
+    for (const name of names) {
+      this.RegisterObject(name);
+    }
   }
 
   RegisterObject(name: string): void {
@@ -61,11 +37,10 @@ class ObjDatabase {
 class DoorDatabase {
   private doorList: Record<string, Door> = {};
 
-  Init(): void {
-    this.RegisterDoor("mapdoor_room5");
-    this.RegisterDoor("jaildoor_room1");
-    this.RegisterDoor("energydoor_room22");
-    this.RegisterDoor("energydoor_room12");
+  Init(names: string[]): void {
+    for (const name of names) {
+      this.RegisterDoor(name);
+    }
   }
 
   RegisterDoor(name: string): void {

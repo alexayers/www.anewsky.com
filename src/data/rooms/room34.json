@@ -1,0 +1,24 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room34",
+  "ambient": "waves",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 150,
+      "loop": false,
+      "images": [
+        "img/rooms/room34/ending_0.png",
+        "img/rooms/room34/ending_1.png",
+        "img/rooms/room34/ending_2.png"
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "position": [77, 142, 161, 269],
+      "destination": "Room21",
+      "clickSound": "walk_sand"
+    }
+  ]
+}

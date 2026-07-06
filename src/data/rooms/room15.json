@@ -1,0 +1,23 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room15",
+  "ambient": "cave",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 50,
+      "images": [
+        "img/rooms/room15/room15_1b.png",
+        "img/rooms/room15/room15_2b.png",
+        "img/rooms/room15/room15_3b.png",
+        "img/rooms/room15/room15_4b.png"
+      ]
+    },
+    { "role": "foreground", "images": ["img/rooms/room15/room15_1f.png"] }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room24", "clickSound": "walk_sand" },
+    { "position": [315, 0, 350, 350], "destination": "Room16", "clickSound": "walk_sand" },
+    { "position": [84, 98, 267, 258], "destination": "Room13", "clickSound": "walk_sand" }
+  ]
+}

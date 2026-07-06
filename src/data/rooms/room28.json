@@ -1,0 +1,30 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room28",
+  "ambient": "wind",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room28/room28_1b.png"] }
+  ],
+  "objects": [
+    {
+      "title": "keycard",
+      "type": "hitbox",
+      "position": [74, 83, 234, 153],
+      "clickSound": "pickup",
+      "image": "img/objects/keycard.png",
+      "onClick": "room28.keycard"
+    }
+  ],
+  "doors": [
+    {
+      "position": [0, 197, 350, 350],
+      "destination": "Room4",
+      "clickSound": "walk_sand"
+    },
+    {
+      "position": [0, 0, 350, 66],
+      "destination": "Room4",
+      "clickSound": "walk_sand"
+    }
+  ]
+}

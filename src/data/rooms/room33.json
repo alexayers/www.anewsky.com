@@ -1,0 +1,48 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room33",
+  "ambient": "waves",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 30,
+      "images": [
+        "img/rooms/room33/room33_1b.png",
+        "img/rooms/room33/room33_2b.png",
+        "img/rooms/room33/room33_3b.png"
+      ]
+    },
+    { "role": "middleground", "images": ["img/rooms/room33/room33_1m.png"] }
+  ],
+  "objects": [
+    {
+      "title": "nav_storage",
+      "type": "hitbox",
+      "position": [41, 239, 84, 302],
+      "onClick": "room33.navStorage"
+    },
+    {
+      "title": "nav_enter",
+      "type": "hitbox",
+      "position": [234, 22, 290, 257],
+      "onClick": "room33.navEnter"
+    }
+  ],
+  "doors": [
+    {
+      "position": [0, 0, 23, 201],
+      "destination": "Room21",
+      "clickSound": "walk_sand"
+    },
+    {
+      "position": [322, 0, 350, 350],
+      "destination": "Room21",
+      "clickSound": "walk_sand"
+    },
+    {
+      "position": [0, 307, 350, 350],
+      "destination": "Room21",
+      "clickSound": "walk_sand"
+    }
+  ]
+}

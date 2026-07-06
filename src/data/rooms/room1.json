@@ -1,0 +1,44 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room1",
+  "ambient": "bad_light",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room1/room1_1b.png"] },
+    {
+      "role": "foreground",
+      "animationRate": 20,
+      "images": [
+        "img/rooms/room1/room1_1f.png",
+        "img/rooms/room1/room1_2f.png",
+        "img/rooms/room1/room1_3f.png",
+        "img/rooms/room1/room1_2f.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "key",
+      "type": "item",
+      "position": [116, 280, 148, 312],
+      "clickSound": "pickup_keys",
+      "image": "img/objects/key.png"
+    },
+    {
+      "title": "broken_cardreader",
+      "type": "hitbox",
+      "position": [167, 200, 185, 223],
+      "onClick": "room1.brokenCardreader"
+    }
+  ],
+  "doors": [
+    {
+      "position": [77, 142, 161, 269],
+      "destination": "Room4",
+      "clickSound": "slide_door",
+      "title": "jaildoor_room1",
+      "locked": true,
+      "register": true
+    },
+    { "position": [0, 0, 42, 348], "destination": "Room2", "clickSound": "walk_building" }
+  ]
+}

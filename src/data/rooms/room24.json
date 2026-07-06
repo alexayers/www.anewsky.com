@@ -1,0 +1,19 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room24",
+  "ambient": "cave",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room24/room24_1b.png"] }
+  ],
+  "objects": [
+    {
+      "title": "cave_computer",
+      "type": "hitbox",
+      "position": [134, 89, 234, 168],
+      "onClick": "room24.caveComputer"
+    }
+  ],
+  "doors": [
+    { "position": [315, 0, 350, 350], "destination": "Room15", "clickSound": "walk_sand" }
+  ]
+}

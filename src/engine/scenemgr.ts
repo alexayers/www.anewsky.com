@@ -4,9 +4,9 @@
 import { sound_engine } from "./audio";
 import { obj_database, door_database } from "../objects/object-database";
 import { setCursor, hideTitles } from "../ui";
+import { buildRoom } from "./room-loader";
 import type { Room } from "./room";
-
-export type RoomBuilder = () => void;
+import type { RoomConfig, Registry } from "../data/schema";
 
 class SceneMgr {
   private sceneMap = new Map<number, Room>();
@@ -14,24 +14,23 @@ class SceneMgr {
   private currentScene = 0;
   private sceneIdx = 0;
 
-  // `builders` is the ordered list of room constructor functions. Every room
-  // name is registered first so doors can resolve destinations by name before
-  // any room is built.
-  Init(builders: RoomBuilder[]): void {
+  // Every room name is registered first so doors can resolve destinations by
+  // name before any room is built from its config.
+  Init(configs: RoomConfig[], registry: Registry): void {
     const totalRooms = 34;
 
     this.sceneNameMap.set("Room0", 0);
     this.sceneNameMap.set("Begin", -1);
 
-    obj_database.Init();
-    door_database.Init();
+    obj_database.Init(registry.objects);
+    door_database.Init(registry.doors);
 
     for (let i = 1; i <= totalRooms; i++) {
       this.NewScene("Room" + i);
     }
 
-    for (const build of builders) {
-      build();
+    for (const cfg of configs) {
+      buildRoom(cfg);
     }
 
     this.SetScene(-1);

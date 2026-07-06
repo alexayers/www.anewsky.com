@@ -1,0 +1,33 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room19",
+  "ambient": "maproom",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 30,
+      "images": [
+        "img/rooms/room19/room19_1b.png",
+        "img/rooms/room19/room19_2b.png",
+        "img/rooms/room19/room19_3b.png"
+      ]
+    },
+    {
+      "role": "middleground",
+      "animationRate": 30,
+      "images": [
+        "img/rooms/room19/room19_1m.png",
+        "img/rooms/room19/room19_2m.png",
+        "img/rooms/room19/room19_3m.png",
+        "img/rooms/room19/room19_4m.png",
+        "img/rooms/room19/room19_5m.png",
+        "img/rooms/room19/room19_6m.png"
+      ]
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 46, 350], "destination": "Room18", "clickSound": "ogg/walk_building" },
+    { "position": [109, 154, 163, 207], "destination": "Room25", "clickSound": "walk_computer" },
+    { "position": [185, 221, 254, 257], "destination": "Room30", "clickSound": "walk_computer" }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room21",
+  "ambient": "waves",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room21/room21_1b.png"] },
+    {
+      "role": "middleground",
+      "animationRate": 50,
+      "images": [
+        "img/rooms/room21/room21_1m.png",
+        "img/rooms/room21/room21_2m.png",
+        "img/rooms/room21/room21_3m.png",
+        "img/rooms/room21/room21_4m.png",
+        "img/rooms/room21/room21_3m.png",
+        "img/rooms/room21/room21_2m.png"
+      ]
+    },
+    {
+      "role": "foreground",
+      "animationRate": 20,
+      "images": [
+        "img/rooms/room21/room21_1f.png",
+        "img/rooms/room21/room21_2f.png",
+        "img/rooms/room21/room21_3f.png",
+        "img/rooms/room21/room21_2f.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "sailboat",
+      "type": "hitbox",
+      "position": [98, 61, 226, 279],
+      "onClick": "room21.sailboat"
+    }
+  ],
+  "doors": [
+    { "position": [297, 0, 350, 350], "destination": "Room20", "clickSound": "walk_sand" },
+    { "position": [250, 152, 288, 219], "destination": "Room33", "clickSound": "walk_sand" }
+  ]
+}

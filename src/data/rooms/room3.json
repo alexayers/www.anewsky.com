@@ -1,0 +1,20 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room3",
+  "ambient": "bad_light",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room3/room3_1b.png"] }
+  ],
+  "doors": [
+    {
+      "position": [295, 119, 350, 333],
+      "destination": "Room2",
+      "clickSound": "unlock_door"
+    },
+    {
+      "position": [158, 102, 233, 138],
+      "destination": "Room31",
+      "clickSound": "open_toolbox"
+    }
+  ]
+}

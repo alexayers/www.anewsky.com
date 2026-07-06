@@ -1,0 +1,48 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room30",
+  "ambient": "maproom",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room30/room30_1b.png"] },
+    {
+      "role": "middleground",
+      "animationRate": 15,
+      "images": [
+        "img/rooms/room30/room30_1m.png",
+        "img/rooms/room30/room30_2m.png",
+        "img/rooms/room30/room30_3m.png",
+        "img/rooms/room30/room30_4m.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "mappad_enter",
+      "type": "hitbox",
+      "position": [12, 305, 74, 339],
+      "clickSound": "computer_walk",
+      "onClick": "room30.mappadEnter"
+    },
+    {
+      "title": "mappad",
+      "type": "hitbox",
+      "position": [107, 297, 315, 337],
+      "clickSound": "computer_type",
+      "value": "0,0",
+      "onClick": "room30.mappad",
+      "onRender": "room30.mappad"
+    }
+  ],
+  "doors": [
+    {
+      "position": [0, 0, 47, 296],
+      "destination": "Room19",
+      "clickSound": "walk_computer"
+    },
+    {
+      "position": [291, 0, 350, 296],
+      "destination": "Room19",
+      "clickSound": "walk_computer"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room17",
+  "ambient": "cave",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room17/room17_1b.png"] },
+    {
+      "role": "middleground",
+      "animationRate": 15,
+      "images": [
+        "img/rooms/room17/room17_1m.png",
+        "img/rooms/room17/room17_2m.png",
+        "img/rooms/room17/room17_3m.png"
+      ]
+    },
+    { "role": "foreground", "images": ["img/rooms/room17/room17_1f.png"] }
+  ],
+  "objects": [
+    {
+      "title": "glassdoor",
+      "type": "hitbox",
+      "position": [98, 78, 251, 175],
+      "register": false,
+      "onClick": "room17.glassdoor"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room16", "clickSound": "walk_sand" }
+  ]
+}

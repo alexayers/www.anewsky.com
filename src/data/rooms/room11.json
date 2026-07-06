@@ -1,0 +1,5 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room11",
+  "layers": [{ "role": "background", "images": ["img/rooms/room11.png"] }]
+}

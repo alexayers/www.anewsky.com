@@ -1,0 +1,29 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room26",
+  "ambient": "spaceship",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room26/room26_1b.png"] }
+  ],
+  "objects": [
+    {
+      "title": "keypad",
+      "registerAs": "keypad_enter",
+      "type": "hitbox",
+      "position": [222, 120, 329, 164],
+      "clickSound": "walk_computer",
+      "onClick": "room26.keypadEnter"
+    },
+    {
+      "title": "keypad",
+      "type": "hitbox",
+      "position": [22, 200, 330, 341],
+      "clickSound": "computer_type",
+      "onClick": "room26.keypad",
+      "onRender": "room26.keypad"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 350, 181], "destination": "Room23", "clickSound": "walk_computer" }
+  ]
+}

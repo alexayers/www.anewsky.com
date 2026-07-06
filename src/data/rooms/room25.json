@@ -1,0 +1,36 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room25",
+  "ambient": "maproom",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 15,
+      "images": [
+        "img/rooms/room25/room25_1b.png",
+        "img/rooms/room25/room25_2b.png",
+        "img/rooms/room25/room25_3b.png",
+        "img/rooms/room25/room25_4b.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "computer",
+      "type": "hitbox",
+      "position": [53, 219, 106, 252],
+      "clickSound": "pick_keycard",
+      "onClick": "room25.computer"
+    },
+    {
+      "title": "mapload_enter",
+      "type": "hitbox",
+      "position": [240, 271, 304, 306],
+      "onClick": "room25.maploadEnter"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 47, 253], "destination": "Room19", "clickSound": "walk_building" },
+    { "position": [291, 0, 350, 249], "destination": "Room19", "clickSound": "walk_building" }
+  ]
+}

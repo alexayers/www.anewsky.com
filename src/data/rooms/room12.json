@@ -1,0 +1,29 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room12",
+  "ambient": "waves",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 25,
+      "images": [
+        "img/rooms/room12/room12_1b.png",
+        "img/rooms/room12/room12_2b.png",
+        "img/rooms/room12/room12_3b.png",
+        "img/rooms/room12/room12_4b.png"
+      ]
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room20", "clickSound": "walk_sand" },
+    { "position": [315, 0, 350, 350], "destination": "Room13", "clickSound": "walk_sand" },
+    {
+      "position": [235, 154, 294, 195],
+      "destination": "Room22",
+      "clickSound": "walk_sand",
+      "title": "energydoor_room12",
+      "register": true
+    },
+    { "position": [105, 165, 211, 261], "destination": "Room23", "clickSound": "walk_sand" }
+  ]
+}

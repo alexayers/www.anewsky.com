@@ -1,0 +1,34 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room18",
+  "ambient": "maproom",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room18/room18_1b.png"] },
+    {
+      "role": "middleground",
+      "animationRate": 20,
+      "images": [
+        "img/rooms/room18/room18_1m.png",
+        "img/rooms/room18/room18_2m.png",
+        "img/rooms/room18/room18_3m.png",
+        "img/rooms/room18/room18_4m.png",
+        "img/rooms/room18/room18_3m.png",
+        "img/rooms/room18/room18_2m.png"
+      ]
+    },
+    { "role": "foreground", "images": ["img/rooms/room18/room18_1f.png"] }
+  ],
+  "objects": [
+    {
+      "title": "wall_shovel",
+      "type": "hitbox",
+      "position": [90, 183, 118, 269],
+      "clickSound": "pickup",
+      "onClick": "room18.wallShovel"
+    }
+  ],
+  "doors": [
+    { "position": [286, 0, 350, 350], "destination": "Room19", "clickSound": "walk_building" },
+    { "position": [131, 142, 248, 267], "destination": "Room5", "clickSound": "slide_door" }
+  ]
+}

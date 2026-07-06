@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "A NEW SKY room config",
+  "type": "object",
+  "required": ["id", "layers"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "description": "Begin | Room0 … Room34" },
+    "ambient": { "type": "string" },
+    "oneTime": { "type": "string", "description": "one-time handler id" },
+    "layers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/layer" }
+    },
+    "objects": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/object" }
+    },
+    "doors": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/door" }
+    }
+  },
+  "definitions": {
+    "rect": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "[topX, topY, bottomX, bottomY]"
+    },
+    "layer": {
+      "type": "object",
+      "required": ["role", "images"],
+      "additionalProperties": false,
+      "properties": {
+        "role": { "enum": ["background", "middleground", "foreground"] },
+        "images": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "animationRate": { "type": "number" },
+        "autoPlay": { "type": "boolean" },
+        "loop": { "type": "boolean" }
+      }
+    },
+    "object": {
+      "type": "object",
+      "required": ["title", "type", "position"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "registerAs": { "type": "string" },
+        "type": { "enum": ["item", "hitbox", "itembox"] },
+        "position": { "$ref": "#/definitions/rect" },
+        "image": { "type": "string" },
+        "inactiveImage": { "type": "string" },
+        "inventoryImage": { "type": "string" },
+        "examineImage": { "type": "string" },
+        "friendlyTitle": { "type": "string" },
+        "clickSound": { "type": "string" },
+        "value": { "type": "string" },
+        "register": { "type": "boolean" },
+        "onClick": { "type": "string" },
+        "onRender": { "type": "string" },
+        "config": { "type": "object" }
+      }
+    },
+    "door": {
+      "type": "object",
+      "required": ["position", "destination"],
+      "additionalProperties": false,
+      "properties": {
+        "position": { "$ref": "#/definitions/rect" },
+        "destination": { "type": "string" },
+        "clickSound": { "type": "string" },
+        "title": { "type": "string" },
+        "locked": { "type": "boolean" },
+        "key": { "type": "string" },
+        "register": { "type": "boolean" }
+      }
+    }
+  }
+}

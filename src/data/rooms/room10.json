@@ -1,0 +1,50 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room10",
+  "ambient": "wind",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 50,
+      "images": [
+        "img/rooms/room10/room10_1b.png",
+        "img/rooms/room10/room10_2b.png",
+        "img/rooms/room10/room10_3b.png"
+      ]
+    },
+    {
+      "role": "middleground",
+      "animationRate": 15,
+      "images": [
+        "img/rooms/room10/room10_1m.png",
+        "img/rooms/room10/room10_2m.png",
+        "img/rooms/room10/room10_3m.png",
+        "img/rooms/room10/room10_2m.png"
+      ]
+    },
+    {
+      "role": "foreground",
+      "animationRate": 25,
+      "images": [
+        "img/rooms/room10/room10_1f.png",
+        "img/rooms/room10/room10_2f.png",
+        "img/rooms/room10/room10_3f.png",
+        "img/rooms/room10/room10_4f.png",
+        "img/rooms/room10/room10_4f.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "parachute",
+      "type": "itembox",
+      "position": [219, 66, 297, 281],
+      "clickSound": "sail",
+      "image": "img/objects/parachute.png",
+      "onClick": "room10.parachute"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room9", "clickSound": "walk_sand" }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room0",
+  "layers": [{ "role": "background", "images": ["img/objects/nothing.png"], "autoPlay": false }],
+  "oneTime": "room0.intro"
+}

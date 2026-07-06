@@ -5,7 +5,8 @@ import { scene } from "./engine/scenemgr";
 import { inventory } from "./engine/inventory";
 import { sound_engine } from "./engine/audio";
 import { preloadImages } from "./engine/preload";
-import { rooms } from "./rooms";
+import { roomConfigs, registry } from "./data";
+import { obj_database, door_database } from "./objects/object-database";
 import { setCursor } from "./ui";
 
 interface Point {
@@ -46,7 +47,7 @@ function start(): void {
   context.imageSmoothingEnabled = false;
 
   preloadImages();
-  scene.Init(rooms);
+  scene.Init(roomConfigs, registry);
 
   canvas.addEventListener("mousemove", (evt) => {
     const p = toInternalCoords(canvas, evt);
@@ -81,7 +82,13 @@ function start(): void {
   // Dev-only test hook (stripped from production builds) for driving scenes
   // deterministically in automated verification.
   if (import.meta.env.DEV) {
-    (window as unknown as { __game?: unknown }).__game = { scene, inventory, sound_engine };
+    (window as unknown as { __game?: unknown }).__game = {
+      scene,
+      inventory,
+      sound_engine,
+      obj_database,
+      door_database,
+    };
   }
 
   renderLoop(canvas, context);

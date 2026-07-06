@@ -1,0 +1,11 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room13",
+  "ambient": "waves",
+  "layers": [{ "role": "background", "images": ["img/rooms/room13/room13_1b.png"] }],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room12", "clickSound": "walk_sand" },
+    { "position": [283, 0, 350, 350], "destination": "Room14", "clickSound": "walk_sand" },
+    { "position": [114, 88, 265, 257], "destination": "Room15", "clickSound": "walk_sand" }
+  ]
+}

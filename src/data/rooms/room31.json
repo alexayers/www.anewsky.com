@@ -1,0 +1,29 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room31",
+  "ambient": "bad_light",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room31/room31_1b.png"] }
+  ],
+  "objects": [
+    {
+      "title": "cardreader",
+      "registerAs": "toolbox",
+      "type": "hitbox",
+      "position": [128, 164, 294, 230],
+      "onClick": "room31.toolbox"
+    }
+  ],
+  "doors": [
+    {
+      "position": [0, 0, 350, 130],
+      "destination": "Room3",
+      "clickSound": "open_toolbox"
+    },
+    {
+      "position": [0, 239, 350, 350],
+      "destination": "Room3",
+      "clickSound": "open_toolbox"
+    }
+  ]
+}

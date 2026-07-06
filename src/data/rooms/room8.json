@@ -1,0 +1,32 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room8",
+  "ambient": "wind",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 50,
+      "images": [
+        "img/rooms/room8/room8_1b.png",
+        "img/rooms/room8/room8_2b.png",
+        "img/rooms/room8/room8_3b.png"
+      ]
+    },
+    {
+      "role": "middleground",
+      "animationRate": 30,
+      "images": [
+        "img/rooms/room8/room8_1m.png",
+        "img/rooms/room8/room8_2m.png",
+        "img/rooms/room8/room8_3m.png",
+        "img/rooms/room8/room8_4m.png",
+        "img/rooms/room8/room8_3m.png",
+        "img/rooms/room8/room8_2m.png"
+      ]
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 63, 350], "destination": "Room7", "clickSound": "walk_sand" },
+    { "position": [281, 0, 350, 350], "destination": "Room9", "clickSound": "walk_sand" }
+  ]
+}

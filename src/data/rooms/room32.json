@@ -1,0 +1,36 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room32",
+  "ambient": "cave",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room32/room32_1b.png"] },
+    { "role": "foreground", "images": ["img/rooms/room32/room32_1f.png"] }
+  ],
+  "objects": [
+    {
+      "title": "release_storage",
+      "type": "hitbox",
+      "position": [249, 247, 320, 284],
+      "clickSound": "good_code",
+      "onClick": "room32.releaseStorage"
+    },
+    {
+      "title": "empty_storage",
+      "type": "hitbox",
+      "position": [72, 188, 115, 246],
+      "onClick": "room32.emptyStorage"
+    }
+  ],
+  "doors": [
+    {
+      "position": [0, 0, 41, 240],
+      "destination": "Room24",
+      "clickSound": "walk_computer"
+    },
+    {
+      "position": [270, 0, 350, 230],
+      "destination": "Room24",
+      "clickSound": "walk_computer"
+    }
+  ]
+}

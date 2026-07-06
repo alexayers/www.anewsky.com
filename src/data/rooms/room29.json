@@ -1,0 +1,25 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room29",
+  "ambient": "spaceship",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room29/room29_1b.png"] },
+    { "role": "middleground", "images": ["img/rooms/room29/room29_1m.png"] }
+  ],
+  "objects": [
+    {
+      "title": "trunk",
+      "type": "hitbox",
+      "position": [46, 140, 331, 314],
+      "clickSound": "remove_power",
+      "onClick": "room29.trunk"
+    }
+  ],
+  "doors": [
+    {
+      "position": [0, 0, 337, 121],
+      "destination": "Room12",
+      "clickSound": "walk_sand"
+    }
+  ]
+}

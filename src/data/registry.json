@@ -1,0 +1,39 @@
+{
+  "objects": [
+    "keycard",
+    "key",
+    "hammer",
+    "toolbox",
+    "purple_crystal",
+    "pink_crystal",
+    "blue_crystal",
+    "storage_device",
+    "parachute",
+    "photo",
+    "cardreader",
+    "broken_cardreader",
+    "keypad",
+    "keypad_enter",
+    "power_cell",
+    "trunk",
+    "generator",
+    "mappad",
+    "mappad_enter",
+    "glassdoor",
+    "shovel",
+    "wall_shovel",
+    "grave",
+    "release_storage",
+    "empty_storage",
+    "cave_computer",
+    "mapload_enter",
+    "nav_storage",
+    "nav_enter"
+  ],
+  "doors": [
+    "mapdoor_room5",
+    "jaildoor_room1",
+    "energydoor_room22",
+    "energydoor_room12"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room4",
+  "ambient": "wind",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 50,
+      "images": [
+        "img/rooms/room4/room4_1b.png",
+        "img/rooms/room4/room4_2b.png",
+        "img/rooms/room4/room4_3b.png"
+      ]
+    },
+    {
+      "role": "middleground",
+      "animationRate": 30,
+      "images": [
+        "img/rooms/room4/room4_1m.png",
+        "img/rooms/room4/room4_2m.png",
+        "img/rooms/room4/room4_3m.png"
+      ]
+    },
+    {
+      "role": "foreground",
+      "animationRate": 70,
+      "images": [
+        "img/rooms/room4/room4_1f.png",
+        "img/rooms/room4/room4_2f.png",
+        "img/rooms/room4/room4_3f.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "keycard",
+      "type": "itembox",
+      "position": [87, 295, 120, 317],
+      "clickSound": "pickup",
+      "image": "img/objects/keycard.png",
+      "onClick": "room4.keycard"
+    }
+  ],
+  "doors": [
+    { "position": [0, 0, 44, 350], "destination": "Room5", "clickSound": "walk_sand" },
+    { "position": [289, 0, 350, 350], "destination": "Room6", "clickSound": "walk_sand" },
+    { "position": [77, 140, 157, 265], "destination": "Room1", "clickSound": "slide_door" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room2",
+  "ambient": "bad_light",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room2/room2_1b.png"] }
+  ],
+  "doors": [
+    {
+      "position": [298, 0, 350, 350],
+      "destination": "Room1",
+      "clickSound": "walk_building",
+      "title": "Prison Door"
+    },
+    {
+      "position": [0, 121, 50, 333],
+      "destination": "Room3",
+      "clickSound": "key_locked",
+      "title": "Closet door",
+      "locked": true,
+      "key": "key"
+    },
+    {
+      "position": [154, 201, 242, 267],
+      "destination": "Room27",
+      "clickSound": "walk_building",
+      "title": "Bed"
+    }
+  ]
+}

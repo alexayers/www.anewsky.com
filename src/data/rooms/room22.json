@@ -1,0 +1,19 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room22",
+  "ambient": "waves",
+  "layers": [
+    { "role": "background", "images": ["img/rooms/room22.png"] }
+  ],
+  "doors": [
+    { "position": [0, 0, 350, 350], "destination": "Room12", "clickSound": "walk_sand" },
+    {
+      "position": [0, 0, 350, 350],
+      "destination": "Room29",
+      "clickSound": "walk_sand",
+      "title": "energydoor_room22",
+      "locked": true,
+      "register": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "../room.schema.json",
+  "id": "Room5",
+  "ambient": "wind",
+  "layers": [
+    {
+      "role": "background",
+      "animationRate": 50,
+      "images": [
+        "img/rooms/room5/room5_1b.png",
+        "img/rooms/room5/room5_2b.png",
+        "img/rooms/room5/room5_3b.png"
+      ]
+    },
+    {
+      "role": "middleground",
+      "animationRate": 70,
+      "images": [
+        "img/rooms/room5/room5_1m.png",
+        "img/rooms/room5/room5_2m.png"
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "title": "cardreader",
+      "type": "hitbox",
+      "position": [270, 183, 302, 230],
+      "clickSound": "slide_door",
+      "onClick": "room5.cardreader"
+    }
+  ],
+  "doors": [
+    {
+      "position": [154, 131, 247, 267],
+      "destination": "Room18",
+      "clickSound": "slide_door",
+      "title": "mapdoor_room5",
+      "locked": true,
+      "register": true
+    },
+    { "position": [306, 0, 350, 350], "destination": "Room4", "clickSound": "walk_sand" }
+  ]
+}
